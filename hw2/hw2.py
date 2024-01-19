@@ -27,7 +27,7 @@ def add_one_and_multiply(a, x):
     """
     ### EXERCISE 1 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
-    return None
+    return (1+a)*x
 
 
 def same_parity(a, b):
@@ -43,7 +43,7 @@ def same_parity(a, b):
     """
     ### EXERCISE 2 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
-    result = None
+    result = a%2==b%2
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result
@@ -63,7 +63,7 @@ def fractional_part(n, d):
     """
     ### EXERCISE 3 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
-    result = None
+    result = (n/d)-(n//d)
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result
@@ -82,7 +82,7 @@ def peep(p, e):
     ### EXERCISE 4 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
     ### You may add one or more assignment statements if you find it helpful.
-    result = None
+    result = pp**e == (p*1000) + (e*100) + (e*10) + (p)
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result
@@ -104,7 +104,7 @@ def is_valid_color(r, g, b):
     ### EXERCISE 5 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
     ### You may add one or more assignment statements if you find it helpful.
-    result = None
+    result = isinstance(r,int) and isinstance(g,int) and isinstance(b,int) and 0<=r<=255 and 0<=g<=255 and 0<=b<=255 
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result
@@ -124,7 +124,8 @@ def is_grey(r, g, b):
     """
     ### EXERCISE 6 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
-    result = None
+    assert is_valid_color(r,g,b)
+    result =r==g==b
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result
@@ -144,7 +145,8 @@ def make_greyscale(r, g, b):
     """
     ### EXERCISE 7 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
-    result = None
+    assert(is_valid_color(r,g,b))
+    result = (r+g+b)//3
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result
@@ -164,7 +166,8 @@ def brightness(r, g, b):
     """
     ### EXERCISE 8 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
-    result = None
+    assert(is_valid_color(r,g,b))
+    result = (.21*r) + (.72*g) + (.07*b)
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result
@@ -185,7 +188,8 @@ def is_bright(r, g, b):
     """
     ### EXERCISE 9 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
-    result = None
+    assert(is_valid_color(r,g,b))
+    result = (.21*r) + (.72*g) + (.07*b)>200
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result
@@ -206,7 +210,8 @@ def is_primary(r, g, b):
     """
     ### EXERCISE 10 -- YOUR CODE GOES HERE
     ### Replace "None" with the correct expression
-    result = None
+    assert(is_valid_color(r,g,b))
+    result = r-(g+b)==255 or g-(r+b)==255 or b-(r+g)==255
 
     ### DO NOT MODIFY THE FOLLOWING LINE!
     return result

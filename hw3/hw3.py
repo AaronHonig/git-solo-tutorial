@@ -6,7 +6,7 @@ Homework #3
 We will be using anonymous grading, so please do NOT include your name
 in this file
 
-People Consulted:
+People Consulted:Jacob Silverstein
    List anyone (other than the course staff) that you consulted about
    this assignment.
 
@@ -45,9 +45,16 @@ def report_score(num_matches, target):
       matches and target.
     """
     assert target > 0
-    ### TODO: Your code here
-    ### Remove the pass statement in the next line
-    pass
+    
+    if num_matches==target:
+        Score=ALL_SCORE
+    if num_matches>1 and num_matches>target:
+        Score=SOME_SCORE
+    if num_matches==1 and target != 1:
+        Score=ONE_SCORE
+    if num_matches==0:
+        Score=ZERO_SCORE
+    return Score
 
 
 # Exercise 2
@@ -57,9 +64,15 @@ def count_cards(cards, lb, ub):
     """
     assert lb <= ub
 
-    ### TODO: Your code here
-    ### Remove the pass statement in the next line
-    pass
+    n=0
+
+    while n<len(cards):
+        if cards==lb+n:
+            match=lb+n
+        n=n+1
+
+
+    
 
 
 # Exercise 3
